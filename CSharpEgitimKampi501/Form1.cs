@@ -50,6 +50,26 @@ namespace CSharpEgitimKampi501
 
         }
 
+        private async void btnDelete_Click(object sender, EventArgs e)
+        {
+            string query = "Delete from TblProduct where ProductId=@productId";
+            var parameters = new DynamicParameters();
+            parameters.Add("@productId",txtProductId.Text);
+            await connection.ExecuteAsync(query, parameters);
+            MessageBox.Show("Ürün Silindi");
+        }
 
+        private async void button4_Click(object sender, EventArgs e)
+        {
+            string query = "Update TblProduct set ProductName=@productName,ProductStock=@productStock,ProductPrice=@productPrice,ProductCategory=@productCategory where ProductId=@productId";
+            var parameters = new DynamicParameters();
+            parameters.Add("@productId", txtProductId.Text);
+            parameters.Add("@productName", txtProductName.Text);
+            parameters.Add("@productStock", txtProductStock.Text);
+            parameters.Add("@productPrice", txtProductPrice.Text);
+            parameters.Add("@productCategory", txtProductCategory.Text);
+            await connection.ExecuteAsync(query, parameters);
+            MessageBox.Show("Ürün Güncellendi","Güncelleme",MessageBoxButtons.OK,MessageBoxIcon.Information);
+        }
     }
 }
