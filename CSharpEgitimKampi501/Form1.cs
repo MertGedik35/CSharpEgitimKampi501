@@ -26,7 +26,6 @@ namespace CSharpEgitimKampi501
 
         }
 
-        private async void button1_Click(object sender, EventArgs e)
         {
             string query = "Select * from TblProduct";
             var values = await connection.QueryAsync<ResulProductDto>(query);
