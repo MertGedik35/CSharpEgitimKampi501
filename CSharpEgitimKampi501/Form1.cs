@@ -44,5 +44,12 @@ namespace CSharpEgitimKampi501
             await connection.ExecuteAsync(query, parameters);
             MessageBox.Show("Ürün Eklendi");
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

@@ -58,10 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="ConnectionString\DatabaseConnectionString.cs" />
-=======
->>>>>>> 563bde63a50cded398c03cadf1b32647ebef6512
     <Compile Include="Dtos\CreateProductDto.cs" />
     <Compile Include="Dtos\ResulProductDto.cs" />
     <Compile Include="Dtos\UpdateProductDto.cs" />
@@ -103,4 +100,4 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-</Project>
+</Project> 

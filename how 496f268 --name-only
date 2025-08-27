@@ -1,0 +1,6 @@
+[33m2ca0ec6[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m Fixed XML parsing error in .csproj file
+[33m496f268[m Form1.cs changes committed
+[33m5d973f1[m Merge conflict resolved - DatabaseConnectionString.cs included
+[33m821be9b[m Add .gitattributes and .gitignore.Add project files.
+[33m563bde6[m Add project files.
+[33m30a3658[m Add .gitattributes and .gitignore.
