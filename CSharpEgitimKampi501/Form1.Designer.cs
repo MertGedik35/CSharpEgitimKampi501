@@ -43,6 +43,12 @@ namespace CSharpEgitimKampi501
             this.txtProductCategory = new System.Windows.Forms.TextBox();
             this.txtProductId = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblTotalProductCount = new System.Windows.Forms.Label();
+            this.lblMaxPriceProductName = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblDistinctCategoryCount = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -178,12 +184,81 @@ namespace CSharpEgitimKampi501
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(20, 486);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(246, 35);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Toplam Kitap Sayısı:";
+            // 
+            // lblTotalProductCount
+            // 
+            this.lblTotalProductCount.AutoSize = true;
+            this.lblTotalProductCount.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalProductCount.ForeColor = System.Drawing.Color.Yellow;
+            this.lblTotalProductCount.Location = new System.Drawing.Point(285, 486);
+            this.lblTotalProductCount.Name = "lblTotalProductCount";
+            this.lblTotalProductCount.Size = new System.Drawing.Size(29, 35);
+            this.lblTotalProductCount.TabIndex = 22;
+            this.lblTotalProductCount.Text = "0";
+            // 
+            // lblMaxPriceProductName
+            // 
+            this.lblMaxPriceProductName.AutoSize = true;
+            this.lblMaxPriceProductName.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaxPriceProductName.ForeColor = System.Drawing.Color.Yellow;
+            this.lblMaxPriceProductName.Location = new System.Drawing.Point(286, 530);
+            this.lblMaxPriceProductName.Name = "lblMaxPriceProductName";
+            this.lblMaxPriceProductName.Size = new System.Drawing.Size(29, 35);
+            this.lblMaxPriceProductName.TabIndex = 24;
+            this.lblMaxPriceProductName.Text = "0";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(70, 530);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(196, 35);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "En Pahalı Kitap:";
+            // 
+            // lblDistinctCategoryCount
+            // 
+            this.lblDistinctCategoryCount.AutoSize = true;
+            this.lblDistinctCategoryCount.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDistinctCategoryCount.ForeColor = System.Drawing.Color.Yellow;
+            this.lblDistinctCategoryCount.Location = new System.Drawing.Point(286, 576);
+            this.lblDistinctCategoryCount.Name = "lblDistinctCategoryCount";
+            this.lblDistinctCategoryCount.Size = new System.Drawing.Size(29, 35);
+            this.lblDistinctCategoryCount.TabIndex = 26;
+            this.lblDistinctCategoryCount.Text = "0";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(75, 576);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(191, 35);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "Kategori Sayısı:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lime;
             this.ClientSize = new System.Drawing.Size(1064, 732);
+            this.Controls.Add(this.lblDistinctCategoryCount);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lblMaxPriceProductName);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblTotalProductCount);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtProductId);
             this.Controls.Add(this.txtProductCategory);
@@ -201,6 +276,7 @@ namespace CSharpEgitimKampi501
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -224,5 +300,11 @@ namespace CSharpEgitimKampi501
         private System.Windows.Forms.TextBox txtProductCategory;
         private System.Windows.Forms.TextBox txtProductId;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblTotalProductCount;
+        private System.Windows.Forms.Label lblMaxPriceProductName;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblDistinctCategoryCount;
+        private System.Windows.Forms.Label label9;
     }
 }

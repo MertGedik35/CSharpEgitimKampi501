@@ -71,5 +71,20 @@ namespace CSharpEgitimKampi501
             await connection.ExecuteAsync(query, parameters);
             MessageBox.Show("Ürün Güncellendi","Güncelleme",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
+
+        private async void Form1_Load_1(object sender, EventArgs e)
+        {
+            string query1 = "Select Count(*) From TblProduct";
+            var productTotalCount = await connection.QueryFirstOrDefaultAsync<int>(query1);
+            lblTotalProductCount.Text = productTotalCount.ToString();
+            
+            string query2 = "Select ProductName From TblProduct Where ProductPrice=(Select Max(ProductPrice) From TblProduct)";
+            var maxPriceProductName = await connection.QueryFirstOrDefaultAsync<string>(query2);
+            lblMaxPriceProductName.Text = maxPriceProductName.ToString();
+
+            string query3 = "Select Count(Distinct(ProductCategory)) From TblProduct";
+            var distinctProductCount = await connection.QueryFirstOrDefaultAsync<int>(query3);
+            lblDistinctCategoryCount.Text = distinctProductCount.ToString();
+        }
     }
 }
